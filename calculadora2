@@ -1,0 +1,38 @@
+'''Faça uma função calculadora que os números e as operações serão feitas pelo usuário. O código deve ficar rodando infinitamente até que o usuário escolha a opção de sair. No início, o programa mostrará a seguinte lista de operações:
+1: Soma
+2: Subtração
+3: Multiplicação
+4: Divisão
+0: Sair
+
+Digite o número para a operação correspondente e caso o usuário introduza qualquer outro, o sistema deve mostrar a mensagem “Essa opção não existe” e voltar ao menu de opções.
+
+Após a seleção, o sistema deve pedir para o usuário inserir o primeiro e segundo valor, um de cada. Depois precisa executar a operação e mostrar o resultado na tela. Quando o usuário escolher a opção “Sair”, o sistema irá parar. 
+
+É necessário que o sistema mostre as opções sempre que finalizar uma operação e mostrar o resultado. '''
+
+def calculadora ():
+    n_1 = float(input('digite o primeiro numero: '))
+    n_2 = float(input('digite o segundo numero: '))
+    print('digite o valor referente a opção desejada: 1 - soma, 2 - subtraçao, 3 - multiplicacao, 4- divisao, 0 - sair: ')
+    operaçao = input('digite a operaçao desejada: ')
+    if (operaçao != '1') and (operaçao != '2') and (operaçao != '3') and (operaçao != '4') and (operaçao != '0'):
+        print ('essa opção nao existe')
+    if (operaçao == '1'):
+        soma = n_1 + n_2
+        return soma   
+    elif (operaçao == "2"):
+        subtraçao = n_1 - n_2
+        return subtraçao                
+    elif (operaçao == "3"):  
+        multip = n_1 * n_2
+        return multip               
+    elif (operaçao == "4"):   
+        divisao = n_1 / n_2
+        return divisao                      
+    elif (operaçao == '0'):                              
+        print ('SAIR')
+
+resultado = calculadora()
+print(resultado)     
+
